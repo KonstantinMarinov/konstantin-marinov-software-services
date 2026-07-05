@@ -6,13 +6,21 @@
   <section class="projects" aria-label="Selected projects">
     @for (project of projects; track project.url) {
       <article class="project">
-        <div>
+        <div class="project-content">
           <h2>{{ project.title }}</h2>
           <p>{{ project.description }}</p>
         </div>
         <a class="project-link" [href]="project.url" target="_blank" rel="noopener">
           View Project
         </a>
+        <div class="project-preview">
+          <iframe
+            [src]="project.previewUrl"
+            [title]="project.title + ' preview'"
+            loading="lazy"
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts"
+          ></iframe>
+        </div>
       </article>
     }
   </section>

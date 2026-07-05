@@ -1,4 +1,12 @@
 import { Component } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+
+type Project = {
+  title: string;
+  url: string;
+  previewUrl: SafeResourceUrl;
+  description: string;
+};
 
 @Component({
   selector: 'app-portfolio-page',
@@ -6,30 +14,39 @@ import { Component } from '@angular/core';
   styleUrl: './portfolio-page.scss'
 })
 export class PortfolioPage {
-  protected readonly projects = [
-    {
-      title: 'Movies with Gope',
-      url: 'https://movies-with-gope.vercel.app/',
-      description:
+  protected readonly projects: Project[];
+
+  constructor(private readonly sanitizer: DomSanitizer) {
+    this.projects = [
+      this.createProject(
+        'Movies with Gope',
+        'https://movies-with-gope.vercel.app/',
         'A movie browsing experience built around quick discovery, clean presentation, and simple navigation through film content.'
-    },
-    {
-      title: 'Forever Growing Nightmares',
-      url: 'https://forever-growing-nightmares.vercel.app/',
-      description:
+      ),
+      this.createProject(
+        'Forever Growing Nightmares',
+        'https://forever-growing-nightmares.vercel.app/',
         'An atmospheric interactive project with a darker visual direction, designed to create a memorable and story-driven web experience.'
-    },
-    {
-      title: 'Guitar Shop Demo',
-      url: 'https://guitar-shop-demo.vercel.app/',
-      description:
+      ),
+      this.createProject(
+        'Guitar Shop Demo',
+        'https://guitar-shop-demo.vercel.app/',
         'A polished ecommerce-style demo for browsing guitars, presenting products clearly, and shaping a straightforward shopping flow.'
-    },
-    {
-      title: 'Project Mia Dent',
-      url: 'https://project-qseu4.vercel.app/',
-      description:
+      ),
+      this.createProject(
+        'Project Mia Dent',
+        'https://project-qseu4.vercel.app/',
         'A compact web project focused on fast loading, direct interaction, and a simple interface that gets out of the user\'s way.'
-    }
-  ];
+      )
+    ];
+  }
+
+  private createProject(title: string, url: string, description: string): Project {
+    return {
+      title,
+      url,
+      previewUrl: this.sanitizer.bypassSecurityTrustResourceUrl(url),
+      description
+    };
+  }
 }
