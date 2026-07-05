@@ -24,13 +24,90 @@
 h1 {
   margin: 0;
   color: #16181d;
+  font-size: clamp(2.25rem, 8vw, 4.75rem);
   font-weight: 700;
   line-height: 1.02;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: 260px;
+  padding: 1.5rem;
+  border: 1px solid #e2e5ea;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+h2 {
+  margin: 0 0 0.75rem;
+  color: #16181d;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.project p {
+  margin: 0;
+  color: #596070;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  min-height: 42px;
+  padding: 0 0.95rem;
+  border: 1px solid #1b1f2a;
+  border-radius: 6px;
+  color: #1b1f2a;
+  background: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.project-link:hover {
+  color: #ffffff;
+  background: #1b1f2a;
+  transform: translateY(-1px);
+}
+
+.project-link:focus-visible {
+  outline: 3px solid #8fb7ff;
+  outline-offset: 3px;
 }
 
 @media (max-width: 520px) {
   .portfolio-page {
     width: min(100% - 1rem, 1120px);
     padding: 3.5rem 0;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+
+  .project {
+    min-height: auto;
+    padding: 1.25rem;
   }
 }

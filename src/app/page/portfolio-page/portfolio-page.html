@@ -1,6 +1,19 @@
 <main class="portfolio-page" id="portfolio">
   <section class="intro">
-    <p class="eyebrow">Portfolio</p>
     <h1>Software services for focused, reliable web products.</h1>
+  </section>
+
+  <section class="projects" aria-label="Selected projects">
+    @for (project of projects; track project.url) {
+      <article class="project">
+        <div>
+          <h2>{{ project.title }}</h2>
+          <p>{{ project.description }}</p>
+        </div>
+        <a class="project-link" [href]="project.url" target="_blank" rel="noopener">
+          View Project
+        </a>
+      </article>
+    }
   </section>
 </main>
