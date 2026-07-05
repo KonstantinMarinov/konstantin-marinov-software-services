@@ -19,6 +19,11 @@ export class PortfolioPage {
   constructor(private readonly sanitizer: DomSanitizer) {
     this.projects = [
       this.createProject(
+        'Project Mia Dent',
+        'https://project-qseu4.vercel.app/',
+        'A compact web project focused on fast loading, direct interaction, and a simple interface that gets out of the user\'s way.'
+      ),
+      this.createProject(
         'Movies with Gope',
         'https://movies-with-gope.vercel.app/',
         'A movie browsing experience built around quick discovery, clean presentation, and simple navigation through film content.'
@@ -32,11 +37,6 @@ export class PortfolioPage {
         'Guitar Shop Demo',
         'https://guitar-shop-demo.vercel.app/',
         'A polished ecommerce-style demo for browsing guitars, presenting products clearly, and shaping a straightforward shopping flow.'
-      ),
-      this.createProject(
-        'Project Mia Dent',
-        'https://project-qseu4.vercel.app/',
-        'A compact web project focused on fast loading, direct interaction, and a simple interface that gets out of the user\'s way.'
       )
     ];
   }
