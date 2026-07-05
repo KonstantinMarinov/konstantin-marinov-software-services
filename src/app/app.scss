@@ -1,0 +1,71 @@
+:host {
+  display: block;
+  min-height: 100dvh;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  background: #f7f8fa;
+  color: #16181d;
+}
+
+.site-header {
+  width: 100%;
+  border-bottom: 1px solid #e2e5ea;
+  background: #ffffff;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: min(100% - 2rem, 1120px);
+  min-height: 72px;
+  margin: 0 auto;
+}
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.logo {
+  display: block;
+  width: auto;
+  max-width: min(52vw, 240px);
+  max-height: 48px;
+  object-fit: contain;
+}
+
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-height: 44px;
+  padding: 0 1rem;
+  border: 1px solid #1b1f2a;
+  border-radius: 6px;
+  color: #ffffff;
+  background: #1b1f2a;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.contact-button:hover {
+  background: #303646;
+  border-color: #303646;
+  transform: translateY(-1px);
+}
+
+.contact-button:focus-visible {
+  outline: 3px solid #8fb7ff;
+  outline-offset: 3px;
+}
