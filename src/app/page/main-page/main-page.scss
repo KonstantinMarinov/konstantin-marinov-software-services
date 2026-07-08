@@ -29,9 +29,47 @@ h1 {
   line-height: 1.02;
 }
 
+.portfolio-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin-top: 2rem;
+  padding: 0 1rem;
+  border: 1px solid #1b1f2a;
+  border-radius: 6px;
+  color: #ffffff;
+  background: #1b1f2a;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.portfolio-link:hover {
+  background: #303646;
+  border-color: #303646;
+  transform: translateY(-1px);
+}
+
+.portfolio-link:focus-visible {
+  outline: 3px solid #8fb7ff;
+  outline-offset: 3px;
+}
+
 @media (max-width: 520px) {
   .main-page {
     width: min(100% - 1rem, 1120px);
     padding: 3.5rem 0;
+  }
+
+  .portfolio-link {
+    min-height: 40px;
+    padding: 0 0.75rem;
+    font-size: 0.875rem;
   }
 }
