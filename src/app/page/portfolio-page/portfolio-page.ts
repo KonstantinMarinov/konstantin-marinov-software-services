@@ -6,6 +6,7 @@ type Project = {
   url: string;
   previewUrl: SafeResourceUrl;
   description: string;
+  mobilePreview: boolean;
 };
 
 @Component({
@@ -46,7 +47,12 @@ export class PortfolioPage {
       title,
       url,
       previewUrl: this.sanitizer.bypassSecurityTrustResourceUrl(url),
-      description
+      description,
+      mobilePreview: false
     };
+  }
+
+  protected toggleMobilePreview(project: Project): void {
+    project.mobilePreview = !project.mobilePreview;
   }
 }
