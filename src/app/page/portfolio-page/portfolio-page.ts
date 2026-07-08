@@ -21,22 +21,22 @@ export class PortfolioPage {
       this.createProject(
         'Project Mia Dent',
         'https://project-qseu4.vercel.app/',
-        'A compact web project focused on fast loading, direct interaction, and a simple interface that gets out of the user\'s way.'
+        'A compact web project exploring fast loading, direct interaction, and a simple interface that gets out of the user\'s way.'
       ),
       this.createProject(
         'Movies with Gope',
         'https://movies-with-gope.vercel.app/',
-        'A movie browsing experience built around quick discovery, clean presentation, and simple navigation through film content.'
+        'A movie browsing experience centered on quick discovery, clean presentation, and simple navigation through film content.'
       ),
       this.createProject(
         'Forever Growing Nightmares',
         'https://forever-growing-nightmares.vercel.app/',
-        'An atmospheric interactive project with a darker visual direction, designed to create a memorable and story-driven web experience.'
+        'An atmospheric interactive project with a darker visual direction and a story-driven web experience.'
       ),
       this.createProject(
         'Guitar Shop Demo',
         'https://guitar-shop-demo.vercel.app/',
-        'A polished ecommerce-style demo for browsing guitars, presenting products clearly, and shaping a straightforward shopping flow.'
+        'A polished ecommerce-style demo that presents guitars clearly and explores a straightforward shopping flow.'
       )
     ];
   }
