@@ -14,7 +14,7 @@
 
 .eyebrow {
   margin: 0 0 0.75rem;
-  color: #596070;
+  color: var(--color-text-muted);
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0;
@@ -23,7 +23,7 @@
 
 h1 {
   margin: 0;
-  color: #16181d;
+  color: var(--color-text);
   font-size: clamp(2.25rem, 8vw, 4.75rem);
   font-weight: 700;
   line-height: 1.02;
@@ -36,28 +36,28 @@ h1 {
   min-height: 44px;
   margin-top: 2rem;
   padding: 0 1rem;
-  border: 1px solid #1b1f2a;
+  border: 1px solid var(--color-action);
   border-radius: 6px;
-  color: #ffffff;
-  background: #1b1f2a;
+  color: var(--color-on-action);
+  background: var(--color-action);
   font-size: 0.95rem;
   font-weight: 600;
   line-height: 1;
   text-decoration: none;
   transition:
-    background-color 160ms ease,
-    border-color 160ms ease,
-    transform 160ms ease;
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .portfolio-link:hover {
-  background: #303646;
-  border-color: #303646;
+  background: var(--color-action-hover);
+  border-color: var(--color-action-hover);
   transform: translateY(-1px);
 }
 
 .portfolio-link:focus-visible {
-  outline: 3px solid #8fb7ff;
+  outline: 3px solid var(--color-focus);
   outline-offset: 3px;
 }
 

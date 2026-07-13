@@ -1,0 +1,37 @@
+/* =========================================================
+   Theme
+   ========================================================= */
+
+$color-page: #f7f8fa !default;
+$color-body-fallback: #f8fafc !default;
+$color-surface: #ffffff !default;
+$color-surface-muted: #eef1f5 !default;
+$color-text: #16181d !default;
+$color-text-muted: #596070 !default;
+$color-action: #1b1f2a !default;
+$color-action-hover: #303646 !default;
+$color-on-action: #ffffff !default;
+$color-border: #e2e5ea !default;
+$color-border-strong: #d8dce3 !default;
+$color-focus: #8fb7ff !default;
+$color-hero-overlay: rgba(0, 0, 0, 0.4) !default;
+
+$transition-fast: 160ms ease !default;
+
+:root {
+  --color-page: #{$color-page};
+  --color-body-fallback: #{$color-body-fallback};
+  --color-surface: #{$color-surface};
+  --color-surface-muted: #{$color-surface-muted};
+  --color-text: #{$color-text};
+  --color-text-muted: #{$color-text-muted};
+  --color-action: #{$color-action};
+  --color-action-hover: #{$color-action-hover};
+  --color-on-action: #{$color-on-action};
+  --color-border: #{$color-border};
+  --color-border-strong: #{$color-border-strong};
+  --color-focus: #{$color-focus};
+  --color-hero-overlay: #{$color-hero-overlay};
+  --font-color: var(--color-text);
+  --transition-fast: #{$transition-fast};
+}

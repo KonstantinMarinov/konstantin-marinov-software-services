@@ -15,7 +15,7 @@
 
 .eyebrow {
   margin: 0 0 0.75rem;
-  color: #596070;
+  color: var(--color-text-muted);
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0;
@@ -24,7 +24,7 @@
 
 h1 {
   margin: 0;
-  color: #16181d;
+  color: var(--color-text);
   font-size: clamp(2.25rem, 8vw, 4.75rem);
   font-weight: 700;
   line-height: 1.02;
@@ -43,11 +43,11 @@ h1 {
   justify-content: space-between;
   gap: 1.25rem;
   padding: 1.5rem 20px;
-  border: 1px solid #e2e5ea;
+  border: 1px solid var(--color-border);
   border-right: 0;
   border-left: 0;
   border-radius: 8px;
-  background: #ffffff;
+  background: var(--color-surface);
 }
 
 .project-preview {
@@ -55,9 +55,9 @@ h1 {
   overflow: hidden;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border: 1px solid #d8dce3;
+  border: 1px solid var(--color-border-strong);
   border-radius: 6px;
-  background: #eef1f5;
+  background: var(--color-surface-muted);
 }
 
 .project-preview iframe {
@@ -66,7 +66,7 @@ h1 {
   width: 100%;
   height: 100%;
   border: 0;
-  background: #ffffff;
+  background: var(--color-surface);
 }
 
 .project-content {
@@ -82,7 +82,7 @@ h1 {
 
 h2 {
   margin: 0 0 0.75rem;
-  color: #16181d;
+  color: var(--color-text);
   font-size: 1.35rem;
   font-weight: 700;
   line-height: 1.2;
@@ -90,7 +90,7 @@ h2 {
 
 .project p {
   margin: 0;
-  color: #596070;
+  color: var(--color-text-muted);
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -102,30 +102,30 @@ h2 {
   align-self: flex-start;
   min-height: 42px;
   padding: 0 0.95rem;
-  border: 1px solid #1b1f2a;
+  border: 1px solid var(--color-action);
   border-radius: 6px;
-  color: #1b1f2a;
-  background: #ffffff;
+  color: var(--color-action);
+  background: var(--color-surface);
   font-size: 0.95rem;
   font-weight: 700;
   line-height: 1;
   text-decoration: none;
   cursor: pointer;
   transition:
-    background-color 160ms ease,
-    color 160ms ease,
-    transform 160ms ease;
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .project-link:hover,
 .project-link.is-active {
-  color: #ffffff;
-  background: #1b1f2a;
+  color: var(--color-on-action);
+  background: var(--color-action);
   transform: translateY(-1px);
 }
 
 .project-link:focus-visible {
-  outline: 3px solid #8fb7ff;
+  outline: 3px solid var(--color-focus);
   outline-offset: 3px;
 }
 

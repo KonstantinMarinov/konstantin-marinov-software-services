@@ -25,8 +25,8 @@ body {
   font-family: Inter, Roboto, 'Segoe UI', sans-serif;
   line-height: 1.5;
   color: var(--font-color);
-  background-color: #f8fafc;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/hero.jpg');
+  background-color: var(--color-body-fallback);
+  background-image: linear-gradient(var(--color-hero-overlay), var(--color-hero-overlay)), url('/hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
