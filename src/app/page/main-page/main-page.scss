@@ -3,22 +3,29 @@
 }
 
 .main-page {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
   width: min(100% - 2rem, 1120px);
+  min-height: calc(100dvh - 73px);
   margin: 0 auto;
-  padding: 5rem 0;
+  padding: 5rem 0 6rem;
+  overflow: hidden;
 }
 
 .intro {
   max-width: 820px;
+  position: relative;
+  z-index: 2;
 }
 
 .eyebrow {
   margin: 0 0 0.75rem;
   color: var(--color-action);
-  font-size: 0.85rem;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   font-weight: 700;
-  letter-spacing: 0;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 h1 {
@@ -28,6 +35,14 @@ h1 {
   font-weight: 700;
   line-height: 1.02;
   text-wrap: balance;
+}
+
+.intro-copy {
+  max-width: 620px;
+  margin-top: 1.5rem;
+  color: var(--color-text-muted);
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  line-height: 1.7;
 }
 
 .portfolio-link {
@@ -63,10 +78,48 @@ h1 {
   outline-offset: 3px;
 }
 
+.hero-portrait {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: -13rem;
+  width: min(66vw, 720px);
+  margin: 0;
+  transform: translateY(-50%);
+  opacity: 0.25;
+  filter: saturate(0.75) contrast(1.05);
+  mask-image: linear-gradient(to right, transparent 0%, black 32%, black 75%, transparent 100%);
+}
+
+.hero-portrait::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+  background: linear-gradient(135deg, rgba(5, 8, 12, 0.7), transparent 60%);
+}
+
+.hero-portrait img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: 64% center;
+  clip-path: polygon(18% 0, 100% 0, 100% 83%, 76% 100%, 0 100%, 0 15%);
+}
+
 @media (max-width: 520px) {
   .main-page {
     width: min(100% - 1rem, 1120px);
+    min-height: calc(100dvh - 65px);
     padding: 3.5rem 0;
+  }
+
+  .hero-portrait {
+    top: auto;
+    right: -5rem;
+    bottom: -3rem;
+    width: 105vw;
+    transform: none;
+    opacity: 0.16;
   }
 
   .portfolio-link {
