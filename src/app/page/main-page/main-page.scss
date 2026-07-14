@@ -82,13 +82,14 @@ h1 {
   position: absolute;
   z-index: 0;
   top: 50%;
-  right: -13rem;
+  right: -4rem;
   width: min(66vw, 720px);
   margin: 0;
   transform: translateY(-50%);
   opacity: 0.25;
   filter: saturate(0.75) contrast(1.05);
-  mask-image: linear-gradient(to right, transparent 0%, black 32%, black 75%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 28%, black 72%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 28%, black 72%, transparent 100%);
 }
 
 .hero-portrait::after {
