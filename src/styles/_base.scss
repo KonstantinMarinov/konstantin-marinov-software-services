@@ -26,10 +26,9 @@ body {
   line-height: 1.5;
   color: var(--font-color);
   background-color: var(--color-body-fallback);
-  background-image: linear-gradient(var(--color-hero-overlay), var(--color-hero-overlay)), url('/hero.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image:
+    radial-gradient(circle at 78% 8%, rgba(43, 184, 255, 0.13), transparent 30rem),
+    radial-gradient(circle at 10% 80%, rgba(43, 184, 255, 0.07), transparent 24rem);
   background-attachment: fixed;
   min-height: 100vh;
   width: 100%;
@@ -66,6 +65,11 @@ a {
 
 a:active {
   transform: scale(0.99);
+}
+
+::selection {
+  color: var(--color-on-action);
+  background: var(--color-action);
 }
 
 ul,

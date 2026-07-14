@@ -14,7 +14,7 @@
 
 .eyebrow {
   margin: 0 0 0.75rem;
-  color: var(--color-text-muted);
+  color: var(--color-action);
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0;
@@ -27,6 +27,7 @@ h1 {
   font-size: clamp(2.25rem, 8vw, 4.75rem);
   font-weight: 700;
   line-height: 1.02;
+  text-wrap: balance;
 }
 
 .portfolio-link {
@@ -53,6 +54,7 @@ h1 {
 .portfolio-link:hover {
   background: var(--color-action-hover);
   border-color: var(--color-action-hover);
+  box-shadow: 0 8px 24px rgba(43, 184, 255, 0.22);
   transform: translateY(-1px);
 }
 
